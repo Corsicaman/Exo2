@@ -29,7 +29,7 @@ body {
 
   .wrapper {
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 5em;
     grid-template-areas:
      "header"
      "sidebar"
@@ -53,12 +53,13 @@ body {
     @media only screen and (min-width: 600px)   {
         .wrapper {
       grid-gap: 20px;
-            grid-template-columns: 120px auto 120px;
+            grid-template-columns: 20vw auto 20vw;
             grid-template-areas:
       "header  header  header"
-            "sidebar content sidebar2"
+            "sidebar sidebar sidebar2"
+            "content content sidebar2"
             "footer  footer  footer";
-            max-width: 600px;
+            max-width: 900px;
         }
     }
 
@@ -72,10 +73,10 @@ body {
 
 .header,
 .footer {
-  background-color: blue;
+  background-color: red;
 }
 
 .sidebar2 {
-  background-color: black;
-  color: #444;
+  background-color: green;
+  color: white;
 }
