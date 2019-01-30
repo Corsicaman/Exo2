@@ -29,6 +29,8 @@ body {
     }
 
   .wrapper {
+    margin: 0 auto;
+    margin-top: 10vh;
     display: grid;
     grid-gap: 1em;
     grid-template-areas:
