@@ -1,66 +1,129 @@
 body {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+    margin-left: -100vw;
 }
 
+
+
 .sidebar {
-        grid-area: sidebar;
-    }
+    grid-area: sidebar;
+}
 
-    .sidebar2 {
-        grid-area: sidebar2;
-    }
+.sidebar2 {
+    grid-area: sidebar2;
+}
 
-    .content {
-        grid-area: content;
-    }
+.content {
+    grid-area: content;
+}
 
-    .header {
-        grid-area: header;
-    }
+.header {
+    grid-area: header;
+}
 
-    .footer {
-        grid-area: footer;
-    }
+.footer {
+    grid-area: footer;
+}
 
-    .wrapper {
-        background-color: #fff;
-        color: #444;
-    }
+.wrapper {
+    background-color: #fff;
+    color: #444;
+}
 
-  .wrapper {
+.burger {
+    grid-area: burger;
+}
+
+.wrapper {
+    width: 100vw;
     margin: 0 auto;
     margin-top: 10vh;
     display: grid;
     grid-gap: 1em;
     grid-template-areas:
-     "header"
-     "sidebar"
-     "content"
-     "sidebar2"
-     "footer"
-  }
+        "burger"
+        "header"
+        "sidebar"
+        "content"
+        "sidebar2"
+        "footer"
+}
 
-    @media only screen and (min-width: 450px)  {
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    // margin-top:20vw;
+}
+
+nav a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    // height: 100px;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 450px) {
     .wrapper {
 
         grid-template-columns: 20% auto;
         grid-template-areas:
-    "header   header"
-        "sidebar  content"
-        "sidebar2 sidebar2"
-        "footer   footer";
+        	"burger burger"
+            "header   header"
+            "sidebar  content"
+            "sidebar2 sidebar2"
+            "footer   footer";
     }
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        flex-direction: column;
+        width: 100vw;
+        margin-left: 0vw;
     }
 
-    @media only screen and (min-width: 700px)   {
-        .wrapper {
-      grid-gap: 40px;
-            grid-template-columns: 120px auto 120px;
-            grid-template-areas:
-      "header  header  header"
+
+    .wrapper {
+        grid-gap: 40px;
+        grid-template-columns: 120px auto 120px;
+        grid-template-areas:
+            "burger burger burger"
+            "header  header  header"
             "sidebar content sidebar2"
             "footer  footer  footer";
-            max-width: 90vw;
-        }
+        max-width: 90vw;
     }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-top: 0;
+    }
+
+    nav a {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .burger,
+    #fermerMenu {
+        display: none;
+    }
+
+}

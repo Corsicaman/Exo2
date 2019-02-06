@@ -1,21 +1,63 @@
+html {
+    font-size: 0.875em;
+    font-family: montserrat;
+}
+body {
+	transition: margin-left 0.5s;
+}
 .box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 150%; 
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
 }
 
 .header,
 .footer {
-  background-color: orange;
+    background-color: orange;
 }
 
 .sidebar2 {
-  background-color: yellow;
-  color: #444;
+    background-color: yellow;
+    color: #444;
 }
+
 .sidebar {
-        background-color: red;
-  
+    background-color: red;
+
+}
+
+nav {
+    // height: 60px;
+    border-radius: 5px;
+}
+
+nav a {
+    border: 1px solid white;
+    color: $color__main-vert;
+    text-decoration: none;
+    font-size: 1.875em;
+    padding: 5px;
+    height: 10vh;
+    background-color: #333;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+
+
+.burger {
+	// position: absolute;
+	// margin-top: 5vw;
+	// margin-left: 5vw;
+}
+#fermerMenu {
+	padding: 5vh;
+	background-color: orange;
+	margin-top: 8vh;
+	font-size: 18px;
+	color: #444;
 }

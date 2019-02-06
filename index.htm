@@ -1,20 +1,52 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 </head>
-<body>
- <div class="wrapper">
-  <div class="box header">Header</div>
-  <div class="box sidebar">Sidebar</div>
-  <div class="box sidebar2">Sidebar 2</div>
-  <div class="box content">Content
-    <br /> More content than we had before so this column is now quite tall.</div>
-  <div class="box footer">Footer</div>
-</div>
-</body>
-</html>
 
+<body>
+    <nav class="nav">
+        <a href="">Bouton</a>
+        <a href="">Bouton</a>
+        <a href="">Bouton</a>
+        <a href="">Bouton</a>
+        <a href="">Bouton</a>
+        <a href="">Bouton</a>
+        <div id="fermerMenu">Fermer</div>
+    </nav>
+    <div class="wrapper">
+        <div class="box burger" id="burger">BURGER</div>
+        <div class="box header">Header</div>
+        <div class="box sidebar">Sidebar</div>
+        <div class="box sidebar2">Sidebar 2</div>
+        <div class="box content">Content
+            <br /> More content than we had before so this column is now quite tall.</div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+<script>
+	var burger = document.getElementById("burger");
+	var fermerMenu = document.getElementById("fermerMenu");
+	burger.addEventListener("click", menu);
+	fermerMenu.addEventListener("click", menu);
+
+	var ouvert = false;
+	function menu() {
+		console.log(ouvert);
+		if (!ouvert) {
+			ouvert = true;
+			document.querySelector("body").style.marginLeft = "0vw";
+		}
+		else {
+			ouvert = false;
+			document.querySelector("body").style.marginLeft = "-100vw";
+		}
+	}	
+
+</script>
+</html>

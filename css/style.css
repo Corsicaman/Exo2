@@ -1,6 +1,10 @@
 body {
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 200vw;
+  margin-left: -100vw; }
 
 .sidebar {
   grid-area: sidebar; }
@@ -21,24 +25,64 @@ body {
   background-color: #fff;
   color: #444; }
 
+.burger {
+  grid-area: burger; }
+
 .wrapper {
+  width: 100vw;
   margin: 0 auto;
   margin-top: 10vh;
   display: grid;
   grid-gap: 1em;
-  grid-template-areas: "header" "sidebar" "content" "sidebar2" "footer"; }
+  grid-template-areas: "burger" "header" "sidebar" "content" "sidebar2" "footer"; }
+
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; }
+
+nav a {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around; }
 
 @media only screen and (min-width: 450px) {
   .wrapper {
     grid-template-columns: 20% auto;
-    grid-template-areas: "header   header" "sidebar  content" "sidebar2 sidebar2" "footer   footer"; } }
+    grid-template-areas: "burger burger" "header   header" "sidebar  content" "sidebar2 sidebar2" "footer   footer"; } }
 
 @media only screen and (min-width: 700px) {
+  body {
+    flex-direction: column;
+    width: 100vw;
+    margin-left: 0vw; }
   .wrapper {
     grid-gap: 40px;
     grid-template-columns: 120px auto 120px;
-    grid-template-areas: "header  header  header" "sidebar content sidebar2" "footer  footer  footer";
-    max-width: 90vw; } }
+    grid-template-areas: "burger burger burger" "header  header  header" "sidebar content sidebar2" "footer  footer  footer";
+    max-width: 90vw; }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 0; }
+  nav a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around; }
+  .burger,
+  #fermerMenu {
+    display: none; } }
+
+html {
+  font-size: 0.875em;
+  font-family: montserrat; }
+
+body {
+  transition: margin-left 0.5s; }
 
 .box {
   background-color: #444;
@@ -57,3 +101,25 @@ body {
 
 .sidebar {
   background-color: red; }
+
+nav {
+  border-radius: 5px; }
+
+nav a {
+  border: 1px solid white;
+  color: #4ceaa4;
+  text-decoration: none;
+  font-size: 1.875em;
+  padding: 5px;
+  height: 10vh;
+  background-color: #333; }
+
+nav a:hover {
+  background-color: #444; }
+
+#fermerMenu {
+  padding: 5vh;
+  background-color: orange;
+  margin-top: 8vh;
+  font-size: 18px;
+  color: #444; }
