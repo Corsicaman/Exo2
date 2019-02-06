@@ -20,7 +20,11 @@
         <div id="fermerMenu">Fermer</div>
     </nav>
     <div class="wrapper">
-        <div class="box burger" id="burger">BURGER</div>
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="box header">Header</div>
         <div class="box sidebar">Sidebar</div>
         <div class="box sidebar2">Sidebar 2</div>
@@ -30,23 +34,30 @@
     </div>
 </body>
 <script>
-	var burger = document.getElementById("burger");
-	var fermerMenu = document.getElementById("fermerMenu");
-	burger.addEventListener("click", menu);
-	fermerMenu.addEventListener("click", menu);
+var burger = document.getElementById("burger");
+var fermerMenu = document.getElementById("fermerMenu");
+var body = document.querySelector("body");
+burger.addEventListener("click", menu);
+fermerMenu.addEventListener("click", menu);
 
-	var ouvert = false;
-	function menu() {
-		console.log(ouvert);
-		if (!ouvert) {
-			ouvert = true;
-			document.querySelector("body").style.marginLeft = "0vw";
-		}
-		else {
-			ouvert = false;
-			document.querySelector("body").style.marginLeft = "-100vw";
-		}
-	}	
+var ouvert = false;
 
+function menu() {
+    if (!ouvert) {
+        ouvert = true;
+        document.querySelector("body").style.marginLeft = "0vw";
+    } else {
+        ouvert = false;
+        document.querySelector("body").style.marginLeft = "-100vw";
+    }
+}
+
+// body.addEventListener("resize", resize);
+body.onresize = function(event) {
+	if (body.style.marginLeft == "-100vw") {
+        body.style.marginLeft = "0vw";
+	}
+}
 </script>
+
 </html>
