@@ -93,14 +93,15 @@ body {
 
 .header,
 .footer {
-  background-color: orange; }
+  background-color: #444; }
 
 .sidebar2 {
-  background-color: yellow;
+  background-color: #4ceaa4;
   color: #444; }
 
 .sidebar {
-  background-color: red; }
+  background-color: #4ceaa4;
+  color: #444; }
 
 nav {
   border-radius: 5px; }

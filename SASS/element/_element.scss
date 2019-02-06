@@ -15,16 +15,17 @@ body {
 
 .header,
 .footer {
-    background-color: orange;
+    background-color: $color__main-dark;
 }
 
 .sidebar2 {
-    background-color: yellow;
-    color: #444;
+    background-color: $color__main-vert;
+    color: $color__main-dark;
 }
 
 .sidebar {
-    background-color: red;
+    background-color: $color__main-vert;
+    color: $color__main-dark;
 
 }
 
