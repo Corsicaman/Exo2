@@ -97,8 +97,8 @@ nav a {
 
 
     .wrapper {
-        grid-gap: 40px;
-        grid-template-columns: 120px auto 120px;
+        grid-gap: 20px;
+        grid-template-columns: 200px auto 200px;
         grid-template-areas:
             "burger burger burger"
             "header  header  header"
